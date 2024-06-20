@@ -26,7 +26,6 @@ buttonMü.onclick = function() { müllfunction(); return false; }
 
 function müllfunction(){
     window.location.href="./Page2.html";
-
 }
 
 //
@@ -35,7 +34,16 @@ var buttonEp = document.getElementById("epilepsie");
 var backgroundColor = true
 buttonEp.onclick = function() { epilepsie(); return false; }
 
-function epilepsie(){
-    window.location.href="./Page2.html";
+var i = 0;
+function change(){
+    var color = ["red", "lightblue"];
 
+    document.getElementById("body").style.backgroundColor = color[(i + 1) % color.length];
+    document.getElementById("header1").style.textDecorationColor = color[i];
+    document.getElementById("header1").style.color= color[i];
+    i = (i + 1) % color.length;
+}
+
+function epilepsie(){
+    setInterval(change, 60);
 }
