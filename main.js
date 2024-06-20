@@ -25,7 +25,7 @@ var backgroundColor = true
 buttonMü.onclick = function() { müllfunction(); return false; }
 
 function müllfunction(){
-    window.location.href="./Page2.html";
+    window.location.href="./page2.html";
 }
 
 //
