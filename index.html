@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Samurai Doggo</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Extremst coole Website</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body id="body">
-
-    <div class="sidenav">
-        <a href="./index.html">Homepage</a>
-        <a href="./page2.html">Müll</a>
-        <a href="./comfort.html">Comforting Picture</a>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="./index.html">
+            <h1 data-value="HOMEPAGE">HOMEPAGE</h1>
+        </a>
+        <a href="./old/index.html">
+            <h2 data-value="OLD THINGSIES">OLD THINGSIES</h2>
+        </a>
+        </a>
+        <a href="./cat.html">
+            <h3 data-value="CAT PICTURES">CAT PICTURES</h3>
+        </a>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <div class="main-child">
+            <h4>Willkommen auf dieser           &zwnj; &#8205; <span class="sinnlos">sinnlosen</span>
+                <span class="fancy"> tollen </span>Website</h4>
+        </div>
+        <div class="stage"></div>
+        
+        
       </div>
 
-<h1 id="header1">Samurai Doggo</h1>
-<p id="dog">Doggo.</p>
-<div class="center">
-    <img class="center_obj" src="pictures/SAMURAI_DOGGO.png" width="500" height="500">
-    <button class="center_obj center" id="button">Farbe</button>
-    <button class="center_obj center" id="epilepsie">Epilepsie</button>
-    <button class="center_obj center" id="müllknopf">Mehr Müll</button>
-</div>
 
-<script src="main.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

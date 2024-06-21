@@ -37,7 +37,16 @@ body {
 }
 
 h1 {
+  font-size: 35px;
   color: rgb(255, 0, 0);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+h2 {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   text-decoration-line: underline;

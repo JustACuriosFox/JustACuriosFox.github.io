@@ -20,16 +20,6 @@ function colorchange(){
 
 //
 
-var buttonMü = document.getElementById("müllknopf");
-var backgroundColor = true
-buttonMü.onclick = function() { müllfunction(); return false; }
-
-function müllfunction(){
-    window.location.href="./page2.html";
-}
-
-//
-
 var buttonEp = document.getElementById("epilepsie");
 var backgroundColor = true
 buttonEp.onclick = function() { epilepsie(); return false; }
