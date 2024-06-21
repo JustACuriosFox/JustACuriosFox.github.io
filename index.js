@@ -4,7 +4,7 @@ window.mobileCheck = function() {
   return check;
 };
 
-if (window.mobileCheck == true) {
+if (window.mobileCheck = true) {
   document.getElementById("snake").style.visibility='hidden' 
 }
 
