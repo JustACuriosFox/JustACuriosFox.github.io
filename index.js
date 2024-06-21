@@ -4,7 +4,7 @@ window.mobileCheck = function() {
   return check;
 };
 
-if (check == true) {
+if (window.mobileCheck == true) {
   document.getElementById("snake").style.visibility='hidden' 
 }
 
@@ -23,8 +23,11 @@ function openNav() {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   let interval = null;
+
+   const headings = [document.querySelector("h1"),document.querySelector("h2"),document.querySelector("h3")] 
   
-  document.querySelector("h1").onmouseover = event => {  
+ for (heading in headings) { 
+  headings[heading].onmouseover = event => {  
     let iteration = 0;
     
     clearInterval(interval);
@@ -48,60 +51,7 @@ function openNav() {
       iteration += 1 / 3;
     }, 30);
   }
-
-  document.querySelector("h2").onmouseover = event => {  
-    let iteration = 0;
-    
-    clearInterval(interval);
-    
-    interval = setInterval(() => {
-      event.target.innerText = event.target.innerText
-        .split("")
-        .map((letter, index) => {
-          if(index < iteration) {
-            return event.target.dataset.value[index];
-          }
-        
-          return letters[Math.floor(Math.random() * 26)]
-        })
-        .join("");
-      
-      if(iteration >= event.target.dataset.value.length){ 
-        clearInterval(interval);
-      }
-      
-      iteration += 1 / 3;
-    }, 30);
-  }
-
-  document.querySelector("h3").onmouseover = event => {  
-    let iteration = 0;
-    
-    clearInterval(interval);
-    
-    interval = setInterval(() => {
-      event.target.innerText = event.target.innerText
-        .split("")
-        .map((letter, index) => {
-          if(index < iteration) {
-            return event.target.dataset.value[index];
-          }
-        
-          return letters[Math.floor(Math.random() * 26)]
-        })
-        .join("");
-      
-      if(iteration >= event.target.dataset.value.length){ 
-        clearInterval(interval);
-      }
-      
-      iteration += 1 / 3;
-    }, 30);
-  }
-
-
-
-
+}
 /*================================================
 
 Polyfill
