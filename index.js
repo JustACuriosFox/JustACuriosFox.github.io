@@ -24,7 +24,7 @@ function openNav() {
 
   let interval = null;
 
-   const headings = [document.querySelector("h1"),document.querySelector("h2"),document.querySelector("h3")] 
+  const headings = [document.querySelector("h1"),document.querySelector("h2"),document.querySelector("h3")] 
   
  for (heading in headings) { 
   headings[heading].onmouseover = event => {  
@@ -851,8 +851,8 @@ Play State
 
   StatePlay.prototype.init = function() {
     this.stageElem = document.querySelector( '.stage' );
-    this.dimLong = 28;
-    this.dimShort = 16;
+    this.dimLong = (Math.floor(screen.width / 54) + 5);
+    this.dimShort = Math.floor(screen.height / 54);
     this.padding = 0;
     this.boardTiles = new g.Group();
     this.keys = {};
