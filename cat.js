@@ -44,13 +44,11 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 
-/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
     document.getElementById("mySidebar").style.width = "800px";
     document.getElementById("main").style.marginLeft = "800px";
   }
   
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
   function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
@@ -59,79 +57,107 @@ function openNav() {
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let interval = null;
+  let interval1 = null;
+  let interval2 = null;
+  let interval3 = null;
+  let interval5 = null;
 
-document.querySelector("h1").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
+  document.querySelector("h1").onmouseover = event => {  
+    let iteration1 = 0;
+    
+    clearInterval(interval1);
+    
+    interval1 = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration1) {
+            return event.target.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
       
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
-}
+      if(iteration1 >= event.target.dataset.value.length){ 
+        clearInterval(interval1);
+      }
+      
+      iteration1 += 1 / 3;
+    }, 15);
+  }
 
-document.querySelector("h2").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
+  document.querySelector("h2").onmouseover = event => {  
+    let iteration2 = 0;
+    
+    clearInterval(interval2);
+    
+    interval2 = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration2) {
+            return event.target.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
       
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
-    
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
-    
-    iteration += 1 / 3;
-  }, 30);
-}
+      if(iteration2 >= event.target.dataset.value.length){ 
+        clearInterval(interval2);
+      }
+      
+      iteration2 += 1 / 3;
+    }, 15);
+  }
 
-document.querySelector("h3").onmouseover = event => {  
-  let iteration = 0;
-  
-  clearInterval(interval);
-  
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-      .split("")
-      .map((letter, index) => {
-        if(index < iteration) {
-          return event.target.dataset.value[index];
-        }
+  document.querySelector("h3").onmouseover = event => {  
+    let iteration3 = 0;
+    
+    clearInterval(interval3);
+    
+    interval3 = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration3) {
+            return event.target.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
       
-        return letters[Math.floor(Math.random() * 26)]
-      })
-      .join("");
+      if(iteration3 >= event.target.dataset.value.length){ 
+        clearInterval(interval3);
+      }
+      
+      iteration3 += 1 / 3;
+    }, 15);
+  }
+
+  document.querySelector("h5").onmouseover = event => {  
+    let iteration5 = 0;
     
-    if(iteration >= event.target.dataset.value.length){ 
-      clearInterval(interval);
-    }
+    clearInterval(interval5);
     
-    iteration += 1 / 3;
-  }, 30);
-}
+    interval5 = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration5) {
+            return event.target.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+      
+      if(iteration5 >= event.target.dataset.value.length){ 
+        clearInterval(interval5);
+      }
+      
+      iteration5 += 1 / 3;
+    }, 15);
+  }

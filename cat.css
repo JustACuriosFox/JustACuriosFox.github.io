@@ -21,7 +21,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%); 
-    user-select: none; /* -- Prevent image highlighting -- */
+    user-select: none; 
   }
   
   #image-track > .image {
@@ -73,35 +73,49 @@ body {
     color: black;
   }
 
-  .sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  
+  h5 {
+    font-family: 'Space Mono', monospace;
+    font-size: 5rem;
+    color: white;
+    margin: 0;
+    padding: 0rem clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
   }
   
-  /* The sidebar links */
+  h5:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
   .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding-left: 8px ;
+    padding-right: 32px ;
+    line-height: 90px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #000000;
     display: block;
     transition: 0.3s;
   }
   
-  /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
     color: #f1f1f1;
   }
   
-  /* Position and style the close button (top right corner) */
   .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -110,7 +124,6 @@ body {
     margin-left: 50px;
   }
   
-  /* The button used to open the sidebar */
   .openbtn {
     font-size: 20px;
     cursor: pointer;
@@ -124,8 +137,7 @@ body {
     background-color: #444;
   }
   
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
-    transition: margin-left .5s; /* If you want a transition effect */
+    transition: margin-left .5s;
     padding: 20px;
   }
