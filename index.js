@@ -92,6 +92,7 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 
 window.onmousemove = e => handleOnMove(e);
 
+
 window.ontouchmove = e => handleOnMove(e.touches[0]);
       
 
@@ -112,6 +113,8 @@ window.mobileCheck = function() {
 };
 
 if (window.mobileCheck() == true) {
+  document.querySelector("body").style.overflow='hidden';
+  document.querySelector("body").style.overflowY='hidden';
   document.getElementById("snake").style.visibility='hidden';
   document.getElementById("Navbar").style.visibility='hidden';
   document.getElementById("settingsButton").style.visibility='hidden';
