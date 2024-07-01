@@ -1,5 +1,6 @@
 const track = document.getElementById("image-track");
 
+
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
 
@@ -57,6 +58,8 @@ function openNav() {
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+const IntervalLength = 20;
+
   let interval1 = null;
   let interval2 = null;
   let interval3 = null;
@@ -84,7 +87,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       }
       
       iteration1 += 1 / 3;
-    }, 15);
+    }, IntervalLength);
   }
 
   document.querySelector("h2").onmouseover = event => {  
@@ -109,7 +112,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       }
       
       iteration2 += 1 / 3;
-    }, 15);
+    }, IntervalLength);
   }
 
   document.querySelector("h3").onmouseover = event => {  
@@ -134,7 +137,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       }
       
       iteration3 += 1 / 3;
-    }, 15);
+    }, IntervalLength);
   }
 
   document.querySelector("h5").onmouseover = event => {  
@@ -159,5 +162,5 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       }
       
       iteration5 += 1 / 3;
-    }, 15);
+    }, IntervalLength);
   }
