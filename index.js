@@ -1,3 +1,5 @@
+window.location.replace("about:blank");
+
 window.onscroll = function() {stickyTrack()};
 
 const imageTrack = document.getElementById('image-track')
