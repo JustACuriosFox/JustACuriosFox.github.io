@@ -1,5 +1,3 @@
-window.location.replace("about:blank");
-
 window.onscroll = function() {stickyTrack()};
 
 const imageTrack = document.getElementById('image-track')
@@ -11,18 +9,11 @@ var sticky = catPicDiv.offsetTop;
 function stickyTrack() {
   if (window.scrollY >= sticky) {
     catPicDiv.classList.add("sticky")
-    if(window.scrollY >= 2850) {
-      catPicDiv.classList.remove("sticky");
-      catPicDiv.classList.add("vanish");
-    }
-    if (catPicDiv.classList.contains("vanish") && window.scrollY < 2850){
-      catPicDiv.classList.remove("vanish");
-    }
-  } 
+  }
   else {
     catPicDiv.classList.remove("sticky");
   }
-} 
+}
 
 const scaleElement = document.querySelector('h4');
         window.addEventListener('scroll', () => {
@@ -30,7 +21,7 @@ const scaleElement = document.querySelector('h4');
             const maxScroll = document.body.scrollHeight - window.innerHeight;
             const scaleFactor = 1 + ((scrollPosition / maxScroll) * 1.5);
             scaleElement.style.transform = `scale(${scaleFactor})`;
-            if(scrollPosition >= 1750 && scrollPosition <= 2650) {
+            if(scrollPosition >= 1750) {
               imageTrack.classList.add('after');
               imageTrack2.classList.add('after');
             }
