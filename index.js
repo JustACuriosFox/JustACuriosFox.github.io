@@ -21,7 +21,7 @@ const scaleElement = document.querySelector('h4');
             const maxScroll = document.body.scrollHeight - window.innerHeight;
             const scaleFactor = 1 + ((scrollPosition / maxScroll) * 1.5);
             scaleElement.style.transform = `scale(${scaleFactor})`;
-            if(scrollPosition >= 1750) {
+            if(scrollPosition >= 1725) {
               imageTrack.classList.add('after');
               imageTrack2.classList.add('after');
             }
